@@ -1,0 +1,44 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+ext {
+    support_libraries_version = '28.0.0'
+}
+dependencies {
+    implementation 'org.jsoup:jsoup:1.18.3'
+    implementation 'org.jetbrains:annotations:15.0'
+    testImplementation 'org.slf4j:slf4j-simple:2.0.17'
+    implementation 'org.slf4j:slf4j-api:1.7.25'
+    implementation 'jakarta.annotation:jakarta.annotation-api:3.0.0'
+    implementation 'com.github.spotbugs:spotbugs:3.1.12'
+//    implementation 'com.sun.net.httpserver:http:20070405'
+
+
+    implementation "com.android.support:appcompat-v7:$support_libraries_version"
+    implementation "com.android.support:customtabs:$support_libraries_version"
+    implementation "com.android.support:design:$support_libraries_version"
+    implementation "com.android.support:cardview-v7:$support_libraries_version"
+    implementation "com.android.support:recyclerview-v7:$support_libraries_version"
+    implementation "com.android.support:preference-v14:$support_libraries_version"
+}

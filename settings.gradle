@@ -1,0 +1,3 @@
+rootProject.name = "adblock-parser"
+include ':adblock-parser'
+
