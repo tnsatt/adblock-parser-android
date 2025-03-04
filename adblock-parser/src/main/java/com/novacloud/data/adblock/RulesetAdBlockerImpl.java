@@ -132,7 +132,7 @@ public class RulesetAdBlockerImpl implements AdBlocker {
     }
 
     private static class InstanceHolder {
-        public static RulesetAdBlockerImpl instance = null;// new RulesetAdBlockerImpl();
+        public static RulesetAdBlockerImpl instance = new RulesetAdBlockerImpl();
     }
 
 }
