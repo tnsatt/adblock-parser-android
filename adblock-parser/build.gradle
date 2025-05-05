@@ -21,6 +21,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    if (project.android.hasProperty("namespace")) {
+        namespace("com.novacloud.data.adblock")
+    }
 }
 ext {
     support_libraries_version = '28.0.0'
